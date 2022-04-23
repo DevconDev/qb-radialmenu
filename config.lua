@@ -634,6 +634,13 @@ Config.JobInteractions = {
                     type = 'client',
                     event = 'police:client:JailPlayer',
                     shouldClose = true
+                }, {
+                    id = 'checkvin',
+                    title = 'Check VIN',
+                    icon = 'search',
+                    type = 'client',
+                    event = 'jl-carboost:client:checkvin',
+                    shouldClose = true
                 }
             }
         }, {
