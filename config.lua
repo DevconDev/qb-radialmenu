@@ -492,6 +492,13 @@ Config.JobInteractions = {
             event = 'police:client:EscortPlayer',
             shouldClose = true
         }, {
+            id = 'mdt',
+            title = 'MDT',
+            icon = 'tablet-alt',
+            type = 'server',
+            event = 'mdt:server:openMDT',
+            shouldClose = true
+        }, {
             id = 'stretcheroptions',
             title = 'Stretcher',
             icon = 'procedures',
@@ -574,6 +581,13 @@ Config.JobInteractions = {
             event = 'police:client:SendPoliceEmergencyAlert',
             shouldClose = true
         }, {
+            id = 'mdt',
+            title = 'MDT',
+            icon = 'tablet-alt',
+            type = 'server',
+            event = 'mdt:server:openMDT',
+            shouldClose = true
+        }, {
             id = 'checkvehstatus',
             title = 'Check Tune Status',
             icon = 'info-circle',
@@ -593,6 +607,13 @@ Config.JobInteractions = {
             icon = 'id-card',
             type = 'client',
             event = 'police:client:SeizeDriverLicense',
+            shouldClose = true
+        }, {
+            id = 'checkvin',
+            title = 'Check VIN',
+            icon = 'search',
+            type = 'client',
+            event = 'jl-carboost:client:checkvin',
             shouldClose = true
         }, {
             id = 'policeinteraction',
@@ -633,13 +654,6 @@ Config.JobInteractions = {
                     icon = 'user-lock',
                     type = 'client',
                     event = 'police:client:JailPlayer',
-                    shouldClose = true
-                }, {
-                    id = 'checkvin',
-                    title = 'Check VIN',
-                    icon = 'search',
-                    type = 'client',
-                    event = 'jl-carboost:client:checkvin',
                     shouldClose = true
                 }
             }
