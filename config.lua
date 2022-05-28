@@ -457,6 +457,13 @@ Config.VehicleSeats = {
 Config.JobInteractions = {
     ["ambulance"] = {
         {
+        id = 'toggleduty',
+        title = 'Toggle Duty',
+        icon = 'toggle-on',
+        type = 'client',
+        event = 'qb-policejob:ToggleDuty',
+        shouldClose = true
+        },{
             id = 'statuscheck',
             title = 'Check Health Status',
             icon = 'heartbeat',
@@ -574,6 +581,13 @@ Config.JobInteractions = {
     },
     ["police"] = {
         {
+    id = 'toggleduty',
+    title = 'Toggle Duty',
+    icon = 'toggle-on',
+    type = 'client',
+    event = 'qb-policejob:ToggleDuty',
+    shouldClose = true
+}, {
             id = 'emergencybutton',
             title = 'Emergency button',
             icon = 'bell',
