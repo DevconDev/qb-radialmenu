@@ -738,6 +738,16 @@ Config.JobInteractions = {
             event = 'qb-hotdogjob:client:ToggleSell',
             shouldClose = true
         }
+    },
+    ["pizzeria"] = {
+        {
+            id = 'toggleduty',
+            title = 'Toggle Duty',
+            icon = 'toggle-on',
+            type = 'client',
+            event = 'qb-policejob:ToggleDuty',
+            shouldClose = true
+        }
     }
 }
 
