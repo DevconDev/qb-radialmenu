@@ -294,6 +294,28 @@ Config.MenuItems = {
             }
         }
     },
+    [3] = {
+        id = 'emotes',
+        title = 'Emotes',
+        icon = 'face-grin-wink',
+        items = {
+            {
+                id = 'sitchair',
+                title = 'Sit Chair',
+                icon = 'chair',
+                type = 'command',
+                event = 'e sitchair',
+                shouldClose = true
+            }, {
+                id = 'emotecancel',
+                title = 'Cancel Emote',
+                icon = 'ban',
+                type = 'command',
+                event = 'e c',
+                shouldClose = true
+            }
+        },
+    },
 }
 
 Config.VehicleDoors = {
@@ -580,14 +602,7 @@ Config.JobInteractions = {
         }
     },
     ["police"] = {
-        {
-    id = 'toggleduty',
-    title = 'Toggle Duty',
-    icon = 'toggle-on',
-    type = 'client',
-    event = 'qb-policejob:ToggleDuty',
-    shouldClose = true
-}, {
+         {
             id = 'emergencybutton',
             title = 'Emergency button',
             icon = 'bell',
@@ -597,7 +612,7 @@ Config.JobInteractions = {
         }, {
             id = 'mdt',
             title = 'MDT',
-            icon = 'tablet-alt',
+            icon = 'tablet',
             type = 'server',
             event = 'mdt:server:openMDT',
             shouldClose = true
@@ -625,7 +640,7 @@ Config.JobInteractions = {
         }, {
             id = 'checkvin',
             title = 'Check VIN',
-            icon = 'search',
+            icon = 'magnifying-glass',
             type = 'client',
             event = 'jl-carboost:client:checkvin',
             shouldClose = true
@@ -693,7 +708,7 @@ Config.JobInteractions = {
                 }, {
                     id = 'spawnschotten',
                     title = 'Speed Limit Sign',
-                    icon = 'sign',
+                    icon = 'sign-hanging',
                     type = 'client',
                     event = 'police:client:spawnRoadSign',
                     shouldClose = false
@@ -710,6 +725,13 @@ Config.JobInteractions = {
                     icon = 'lightbulb',
                     type = 'client',
                     event = 'police:client:spawnLight',
+                    shouldClose = false
+                }, {
+                    id = 'firstaid',
+                    title = 'First Aid Kit',
+                    icon = 'bandage',
+                    type = 'client',
+                    event = 'police:client:spawnFirstaid',
                     shouldClose = false
                 }, {
                     id = 'spikestrip',
