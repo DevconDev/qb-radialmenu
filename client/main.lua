@@ -88,6 +88,17 @@ local function SetupVehicleMenu()
     if Vehicle ~= 0 then
         VehicleMenu.items[#VehicleMenu.items+1] = Config.VehicleDoors
         if Config.EnableExtraMenu then VehicleMenu.items[#VehicleMenu.items+1] = Config.VehicleExtras end
+        
+        if not IsVehicleOnAllWheels(Vehicle) then
+            VehicleMenu.items[#VehicleMenu.items+1] = {
+                id = 'vehicle-flip',
+                title = 'Flip Vehicle',
+                icon = 'car-burst',
+                type = 'client',
+                event = 'qb-radialmenu:flipVehicle',
+                shouldClose = true
+            }
+        end
 
         if IsPedInAnyVehicle(ped) then
             local seatIndex = #VehicleMenu.items+1
@@ -323,6 +334,23 @@ RegisterNetEvent('qb-radialmenu:client:ChangeSeat', function(data)
     else
         QBCore.Functions.Notify(Lang:t("error.race_harness_on"), 'error')
     end
+end)
+
+RegisterNetEvent('qb-radialmenu:flipVehicle', function()
+    TriggerEvent('animations:client:EmoteCommandStart', {"mechanic"})
+    QBCore.Functions.Progressbar("pick_grape", Lang:t("progress.flipping_car"), Config.Fliptime, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function() -- Done
+        local vehicle = getNearestVeh()
+        SetVehicleOnGroundProperly(vehicle)
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    end, function() -- Cancel
+        QBCore.Functions.Notify(Lang:t("task.cancel_task"), "error")
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+    end)
 end)
 
 -- NUI Callbacks
