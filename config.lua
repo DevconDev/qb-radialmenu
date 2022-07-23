@@ -522,7 +522,7 @@ Config.JobInteractions = {
         }, {
             id = 'mdt',
             title = 'MDT',
-            icon = 'tablet-alt',
+            icon = 'tablet-screen-button',
             type = 'server',
             event = 'mdt:server:openMDT',
             shouldClose = true
@@ -597,6 +597,16 @@ Config.JobInteractions = {
             icon = 'truck-pickup',
             type = 'client',
             event = 'qb-tow:client:TowVehicle',
+            shouldClose = true
+        }
+    },
+    ["realestate"] = {
+        {
+            id = 'realestate',
+            title = 'Real Estate Menu',
+            icon = 'toggle-on',
+            type = 'client',
+            event = 'qb-houses:client:OpenRealEstateMenu',
             shouldClose = true
         }
     },
