@@ -549,6 +549,79 @@ Config.JobInteractions = {
             }
         }
     },
+    ["fire"] = {
+        {
+        id = 'toggleduty',
+        title = 'Toggle Duty',
+        icon = 'toggle-on',
+        type = 'client',
+        event = 'qb-policejob:ToggleDuty',
+        shouldClose = true
+        },{
+            id = 'statuscheck',
+            title = 'Check Health Status',
+            icon = 'heart-pulse',
+            type = 'client',
+            event = 'hospital:client:CheckStatus',
+            shouldClose = true
+        },{
+            id = 'revivep',
+            title = 'Revive',
+            icon = 'user-doctor',
+            type = 'client',
+            event = 'hospital:client:RevivePlayer',
+            shouldClose = true
+        },{
+            id = 'treatwounds',
+            title = 'Heal wounds',
+            icon = 'bandage',
+            type = 'client',
+            event = 'hospital:client:TreatWounds',
+            shouldClose = true
+        }, {
+            id = 'emergencybutton2',
+            title = 'Emergency button',
+            icon = 'bell',
+            type = 'client',
+            event = 'police:client:SendPoliceEmergencyAlert',
+            shouldClose = true
+        }, {
+            id = 'escort',
+            title = 'Escort',
+            icon = 'user-group',
+            type = 'client',
+            event = 'police:client:EscortPlayer',
+            shouldClose = true
+        }, {
+            id = 'mdt',
+            title = 'MDT',
+            icon = 'tablet-screen-button',
+            type = 'server',
+            event = 'mdt:server:openMDT',
+            shouldClose = true
+        }, {
+            id = 'stretcheroptions',
+            title = 'Stretcher',
+            icon = 'bed-pulse',
+            items = {
+                {
+                    id = 'spawnstretcher',
+                    title = 'Spawn Stretcher',
+                    icon = 'plus',
+                    type = 'client',
+                    event = 'qb-radialmenu:client:TakeStretcher',
+                    shouldClose = false
+                }, {
+                    id = 'despawnstretcher',
+                    title = 'Remove Stretcher',
+                    icon = 'minus',
+                    type = 'client',
+                    event = 'qb-radialmenu:client:RemoveStretcher',
+                    shouldClose = false
+                }
+            }
+        }
+    },
     ["taxi"] = {
         {
             id = 'togglemeter',
